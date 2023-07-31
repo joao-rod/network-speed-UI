@@ -1,4 +1,5 @@
 from infrastructure.config.base import Base
+from infrastructure.config.connection import DBConnection
 from sqlalchemy import Column, Integer, String, DateTime, Float
 
 class Network(Base):
@@ -15,6 +16,8 @@ class Network(Base):
     deleted_at = Column(DateTime)
     
     def __repr__(self):
-        return f'<Network (created={self.created}, host={self.host}, provider={self.provider}, local_provider={self.local_provider}, download={self.download}, upload={self.upload}, latency={self.latency})>'
+        return f'<Network (created_at={self.created_at}, host={self.host}, provider={self.provider}, local_provider={self.local_provider}, download={self.download}, upload={self.upload}, latency={self.latency}, deleted_at={self.deleted_at})>'
 
 
+with DBConnection() as db:
+    Base.metadata.create_all(db.get_engine())
