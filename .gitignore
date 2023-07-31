@@ -1,6 +1,6 @@
 # created by virtualenv automatically
-bin
-lib
-include
-share
-__pycache__
+bin/
+lib/
+include/
+share/
+**/__pycache__/
