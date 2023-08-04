@@ -46,4 +46,3 @@ def delete_alert(page: ft.Page):
     #     ),
     # )
 
-ft.app(target=delete_alert)
