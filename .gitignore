@@ -3,6 +3,7 @@ bin/
 lib/
 include/
 share/
+.vscode/
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
